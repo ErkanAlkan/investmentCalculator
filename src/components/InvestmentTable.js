@@ -1,5 +1,3 @@
-import "./InvestmentTable.css";
-
 const InvestmentTable = (props) => {
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",

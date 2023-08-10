@@ -33,7 +33,7 @@ function App() {
     <div>
       <InvestmentHeader></InvestmentHeader>
       <InvestmentForm passData={calculateHandler}></InvestmentForm>
-      {!userInput && <p>No investment calculated yet!</p>}
+      {!userInput && <p style={{textAlign: "center"}}>No investment calculated yet!</p>}
       {userInput && (
         <InvestmentTable
           yearlyData={yearlyData}

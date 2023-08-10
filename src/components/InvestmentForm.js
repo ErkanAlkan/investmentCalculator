@@ -10,6 +10,7 @@ const InvestmentForm = (props) => {
   const [userInput, setUserInput] = useState(initialUserInput);
   const resetHandler = () => {
     setUserInput(initialUserInput);
+    props.passData(null);
   };
   const submitHandler = (event) => {
     event.preventDefault();
@@ -19,7 +20,7 @@ const InvestmentForm = (props) => {
     setUserInput((prevInput) => {
       return {
         ...prevInput,
-        [input]: value
+        [input]: +value
       }
     })
     console.log(input, value);
